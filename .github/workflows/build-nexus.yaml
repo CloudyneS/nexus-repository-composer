@@ -28,8 +28,6 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v2
         with:
-          cache-from: type=registry,ref=ghcr.io/cloudynes/php-base:cache
-          cache-to: type=registry,ref=ghcr.io/cloudynes/php-base:cache
           context: .
           file: Dockerfile
           push: true
